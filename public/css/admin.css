@@ -1,0 +1,91 @@
+/* ================================================
+   AutoVault Admin — Brand & Font Overrides
+   Applied on top of Filament v5's default styles
+   ================================================ */
+
+/* ── DM Sans everywhere ── */
+body,
+.fi-sidebar,
+.fi-sidebar-nav,
+.fi-topbar,
+.fi-main,
+.fi-simple-main,
+.fi-body,
+.fi-header,
+.fi-modal,
+.fi-ta-cell,
+.fi-fo-field-wrp,
+.fi-in-text,
+button,
+input,
+select,
+textarea {
+    font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* ── Sidebar brand header ── */
+.fi-sidebar-header {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 18px 16px;
+}
+
+/* ── Logo / brand name size ── */
+.fi-brand-name {
+    font-size: 1.1rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.4px;
+}
+
+/* ── Stats overview widget ── */
+.fi-wi-stats-overview-stat {
+    border-radius: 12px !important;
+}
+.fi-wi-stats-overview-stat-value {
+    font-weight: 800 !important;
+    font-size: 1.75rem !important;
+}
+
+/* ── Table row hover ── */
+.fi-ta-row:hover td {
+    background: rgba(var(--color-primary-50), 0.6);
+}
+
+/* ── Pending-review badge pulse ── */
+.fi-badge[style*="warning"] {
+    animation: pulse-warning 2s ease-in-out infinite;
+}
+@keyframes pulse-warning {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.7; }
+}
+
+/* ── Action buttons spacing ── */
+.fi-ta-actions {
+    gap: 4px !important;
+}
+
+/* ── Notification toasts ── */
+.fi-notifications {
+    z-index: 99999;
+}
+.fi-no-notification {
+    border-radius: 10px !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13) !important;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* ── Modal ── */
+.fi-modal-window {
+    border-radius: 14px !important;
+}
+
+/* ── Scrollbar refinements ── */
+.fi-sidebar::-webkit-scrollbar { width: 4px; }
+.fi-sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
+
+/* ── Mobile UX ── */
+@media (max-width: 768px) {
+    .fi-wi-stats-overview-stat-value {
+        font-size: 1.4rem !important;
+    }
+}
